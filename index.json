@@ -1,0 +1,6 @@
+[
+  {
+    "context": "/user",
+    "include": "user.json"
+  }
+]

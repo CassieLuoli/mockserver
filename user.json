@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "method": "post",
+      "uri": "/login",
+      "json": {
+        "username": "valid",
+        "passwrod": "valid"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "auth": {
+          "id-token": "123456",
+          "access-token": "98908989089",
+          "refresh-token": "34545234234"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/profile",
+      "headers": {
+        "id-token": "123456",
+        "access-token": "98908989089"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "profile": {
+          "name": "John Smith",
+          "gender": "male",
+          "avartar": ""
+        }
+      }
+    }
+  }
+]
