@@ -1,7 +1,10 @@
 # mockserver
 
+**This a demo of mock server built with https://github.com/dreamhead/moco** 
 
-A standlone mockserver with some basic demo api already built-in. ** This a demo of mock server built with https://github.com/dreamhead/moco **
+A standlone mockserver with some basic demo api already built-in. 
+
+
 
 ## How to run the mock server
 
@@ -9,32 +12,38 @@ A standlone mockserver with some basic demo api already built-in. ** This a demo
 ./start.sh
 ```
 
+
+
 ## Built-in APIs
 
-4 APIs are built-in this demo.
+4 APIs are built-in this demo. You can add more to match your business value.
 
 * Login
 * getProfile
 * getNews
 * getNews with ID
 
+
+
 You can use Postman to trigger the mock server. 
 
-** Login **
 
-```
-post http://127.0.0.1:12306/user
+
+**Login**
+
+```Json
+post http://127.0.0.1:12306/user/login
 
 body:
 {
     "username": "valid",
-    "passwrod": "valid"
+    "password": "valid"
 }
 ```
 
 Response 200 should be get:
 
-```
+```Json
 {
     "auth": {
         "id-token": "123456",
@@ -46,9 +55,9 @@ Response 200 should be get:
 
 Please try to post some wrong username & password value to mock server. What you would get?
 
-** getProfile **
+**getProfile**
 
-```
+```json
 get http://127.0.0.1:12306/user/profile
 
 header:
@@ -58,7 +67,7 @@ header:
 
 Response 200 should be get:
 
-```
+```Json
 {
     "profile": {
         "name": "John Smith",
@@ -68,9 +77,9 @@ Response 200 should be get:
 }
 ```
 
-** getNews **
+**getNews**
 
-```
+```Json
 get http://127.0.0.1:12306/news
 
 header:
@@ -80,7 +89,7 @@ header:
 
 Response 200 should be get:
 
-```
+```Json
 {
     "timestamp": 123123123,
     "news": [
@@ -96,11 +105,13 @@ Response 200 should be get:
 
 If neither id-token | access-token is given with right value. 400 should be returned.
 
-** getNews With ID **
 
-id doesn't have to to 123, can be any string.
 
-```
+**getNews With ID**
+
+ID doesn't have to to 123, can be any string.
+
+```json
 get http://127.0.0.1:12306/news/123
 
 header:
@@ -110,7 +121,7 @@ header:
 
 Response 200 should be get:
 
-```
+```Json
 {
     "content": {
         "id": "123",

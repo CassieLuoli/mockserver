@@ -5,7 +5,7 @@
       "uri": "/login",
       "json": {
         "username": "valid",
-        "passwrod": "valid"
+        "password": "valid"
       }
     },
     "response": {
