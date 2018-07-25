@@ -1,0 +1,55 @@
+[
+  {
+    "request": {
+      "uri": "/",
+      "headers": {
+        "id-token": "123456",
+        "access-token": "98908989089"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "timestamp": 123123123,
+        "news": [
+          {
+            "id": "123",
+            "title": "Tomorrow would rain",
+            "subtitle": "Tomorrow would rainTomorrow would rainTomorrow would rainTomorrow would rain"
+          },
+          {
+            "id": "124",
+            "title": "Tomorrow is another day",
+            "subtitle": "Tomorrow is another dayTomorrow is another dayTomorrow is another day"
+          },
+          {
+            "id": "125",
+            "title": "Tomorrow is tomorrow",
+            "subtitle": "Tomorrow is tomorrowTomorrow is tomorrowTomorrow is tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "uri": {
+        "match": "/\\w+"
+      },
+      "headers": {
+        "id-token": "123456",
+        "access-token": "98908989089"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "content": {
+          "id": "123",
+          "header": "",
+          "content": {}
+        }
+      }
+    }
+  }
+]

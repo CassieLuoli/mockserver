@@ -2,5 +2,9 @@
   {
     "context": "/user",
     "include": "user.json"
+  },
+  {
+    "context": "/news",
+    "include": "news.json"
   }
 ]
